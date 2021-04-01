@@ -1,0 +1,12 @@
+***elimde office olmadigi için burdan yaziyorum hocam kusura bakmayin (elde etmeyi denedim ama basaramadim)****
+***************************************************************************************************************
+ödevin sahibi:Sinan Urgun
+Ders:Web Teknolojileri
+Ögretim Görevlisi :Ögr.Gör.Dr. CAN YÜZKOLLAR
+Ödevin Konusu: html, css ve js kullanarak bir web sitesi tasarlamak
+*******************************************************************
+1.fotorafta ana sayfami görüyorsunuz ana sayfa genel olarak bir slider ve iki div lerden olusmus butondan olusuyor 
+2.fotorafta ise bilgilerim kismi yani cv niteligindeki bir table ve kisa özgeçmis
+3. fotorafta ise hakimda kismi bu kisimda iç içe divlerden olusmus kutucuklardan olusmus bir sayfa görmekteyiz son kutucuk ise bir youtube linkine götürmektedir
+4.fotorafta ise kisa bir ankara tanitimi vardir 3. fotorafla ayni sekilde yapilmmistir
+5.fotorafta ise form umu görmekteyiz js ve html kullanilarak yapilmistir 

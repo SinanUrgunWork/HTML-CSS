@@ -1,0 +1,134 @@
+<!DOCTYPE HTML>
+<html lang="en_us">
+<head>
+    <meta charset="UTF-8">
+	<title>proje odevi</title>
+	<link rel="stylesheet" href="css/styles.css"/><!--css leri ekledim-->
+	<link rel="stylesheet" href="css/reset.css"/>
+	<script type="text/javascript">
+	function odaklan(x)
+	{
+	if(x=="ad" || x=="soyad" ||x=="ka" ||x=="e-mail")
+	{
+	document.getElementById(x).value="";
+
+	}
+	}
+	function cikis(x,y)
+	{
+	if(y=="")
+		{
+				if(x=="ad")
+				{ document.getElementById(x).value="Adınızı yazınız";}
+				if(x=="soyad")
+				{ document.getElementById(x).value="Soyadınızı yazınız";}
+				if(x=="ka")
+				{ document.getElementById(x).value="Kullanıcı adını yazınız";}
+				if(x=="e-mail")
+				{ document.getElementById(x).value="E-Mail giriniz";}
+				document.getElementById(x).style.background="#fff";
+				document.getElementById(x).style.color="#ababab";
+				document.getElementById(x).style.borderColor="#bbb";
+		
+		}
+	else
+		{
+				document.getElementById(x).style.background="#fff";
+				document.getElementById(x).style.color="#000";
+				document.getElementById(x).style.borderColor="#bbb";
+		
+		}
+	
+	
+	}
+	function islem()
+{  
+    var kural, yazi;
+	yazi=document.getElementById("e-mail").value;
+	kural=/.+@.+\.+./;
+	
+	if(document.getElementById("ad").value=="Adınızı yazınız")
+	{document.getElementById("aduyari").innerHTML="Adınızı yazmadınız!";}
+	if(document.getElementById("soyad").value=="Soyadınızı yazınız")
+	{document.getElementById("soyadiuyari").innerHTML="Soyadınızı yazmadınız!";}
+	if(document.getElementById("ka").value=="Kullanıcı adını yazınız")
+	{document.getElementById("kadiuyari").innerHTML="Kullanıcı adını yazmadınız!";}
+	if(document.getElementById("parola").value=="")
+	{document.getElementById("parolauyari").innerHTML="Şifrenizi yazmadınız!";}
+	if(document.getElementById("e-mail").value=="E-Mail giriniz")
+	{document.getElementById("mailuyari").innerHTML="Mailinizi yazmadınız!";}
+	else if(!kural.test(yazi))
+	{document.getElementById("mailuyari").innerHTML="Geçersiz Mail!!"}
+}
+function temiz()
+{
+	document.getElementById("aduyari").innerHTML="";
+    document.getElementById("soyadiuyari").innerHTML="";
+    document.getElementById("kadiuyari").innerHTML="";
+	document.getElementById("mailuyari").innerHTML="";
+	document.getElementById("parolauyari").innerHTML="";
+	}
+	</script>
+</head>
+<body>
+
+<header>
+
+<ul>
+	<li><a href="index.html">anasayfa</a></li>
+	<li><a href="bilgiler.html">bilgiler</a></li>
+	<li><a href="hakkımda.html">hakkımda</a></li>
+	<li><a href="sehir tanıtımı.html">sehir tanıtımı</a></li>
+	<li><a href="iletisim.html">iletisim</a></li>
+</ul>
+</header>
+<div class="form1">
+<table style="width:630px;">
+   <tr>
+       <td style="width:180px;">adı</td>
+	   <td style="width:270px;"><input name="" id="ad"  value="adınızı yazınız " onfocus="odaklan(this.id)" onblur="cikis(this.id,this.value)"type="text"></td>
+	   <td style="width:180px;"><span id="aduyari"> </span></td>
+	</tr>   
+	 <tr>
+       <td>soyadı</td>
+	   <td><input name="" id="soyad"  value="soyadınızı yazınız " onfocus="odaklan(this.id)"  onblur="cikis(this.id,this.value)" type="text"></td>
+	   <td><span id="soyadiuyari"></span></td>
+	</tr>   
+	 <tr>
+       <td>kullanıcı adı</td>
+	   <td><input name="" id="ka"  value="kullanıcı adınızı yazınız " onfocus="odaklan(this.id)"  onblur="cikis(this.id,this.value)" type="text"></td>
+	   <td><span id="kadiuyari"></span></td>
+	</tr>   
+	 <tr>
+       <td>parola</td>
+	   <td><input name="" id="parola"  value="" type="password"></td>
+	   <td><span id="parolauyari"></span></td>
+	</tr>   
+	 <tr>
+       <td>e-mail</td>
+	   <td><input name="" id="e-mail"  value="e-mail adresinizi giriniz " onfocus="odaklan(this.id)"  onblur="cikis(this.id,this.value)" type="text"></td>
+	   <td><span id="mailuyari"></span></td>
+	</tr>    
+	<tr>
+       <td></td>
+	   <td><input name="" id="button" type="button" onclick="islem()" value="GÖNDER"></td>
+	   <td><input name="" id="button" type="button" onclick="temiz()" value="TEMİZLE"></td>
+	</tr>  
+</table>	
+</form>
+</div>
+<footer>
+<div class="footer">
+	<nav>
+		<ul>
+			<li><a href="index.html">anasayfa</a></li>
+			<li><a href="hakkımda.html">hakkımda</a></li>
+			<li><a href="sehir tanıtımı.html">sehir tanıtımı</a></li>
+			<li><a href="iletisim.html">iletisim</a></li>
+		</ul>
+	</nav>
+	
+</div>
+</footer>
+</body>	
+</html>
